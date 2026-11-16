@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | GadgetGrid</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">Gadget<span>Grid</span></a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">View Store</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="admin.html" class="active">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="admin-page">
+
+    <div class="admin-heading">
+        <div>
+            <h1>Dashboard</h1>
+            <p>Manage your GadgetGrid demo orders.</p>
+        </div>
+        <span class="admin-label">DEMO ADMIN</span>
+    </div>
+
+    <section class="stats-grid">
+        <div class="stat-card">
+            <p>Total Orders</p>
+            <h2 id="totalOrders">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <p>Total Revenue</p>
+            <h2 id="totalRevenue">৳0</h2>
+        </div>
+
+        <div class="stat-card">
+            <p>Pending Orders</p>
+            <h2 id="pendingOrders">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <p>Completed Orders</p>
+            <h2 id="completedOrders">0</h2>
+        </div>
+    </section>
+
+    <section class="orders-section">
+        <div class="orders-heading">
+            <div>
+                <h2>Recent Orders</h2>
+                <p>Review and update customer orders.</p>
+            </div>
+
+            <button id="refreshOrders" class="refresh-btn">
+                Refresh
+            </button>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Phone</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ordersTable">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="emptyOrders" class="empty-orders" hidden>
+            <h3>No orders yet</h3>
+            <p>Orders placed through checkout will appear here.</p>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
